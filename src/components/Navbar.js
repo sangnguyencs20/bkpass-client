@@ -50,7 +50,7 @@ export function Navbar() {
       e.preventDefault();
       if (searchStr !== "") {
         window.location.assign(
-          `${process.env.REACT_APP_FRONTEND_ROOT}/search?s=${searchStr}`
+          `/search?s=${searchStr}`
         );
       }
     }
@@ -113,7 +113,7 @@ export function Navbar() {
                 onClick={(e) => {
                   e.preventDefault();
                   window.location.assign(
-                    `${process.env.REACT_APP_FRONTEND_ROOT}`
+                    '/'
                   );
                 }}
               >
@@ -200,7 +200,7 @@ export function Navbar() {
               onClick={(e) => {
                 e.preventDefault();
                 window.location.assign(
-                  `${process.env.REACT_APP_FRONTEND_ROOT}/add-item`
+                  '/add-item'
                 );
               }}
             >
@@ -225,7 +225,7 @@ const DropdownSection = () => {
       >
         <li>
           <a
-            href={`${process.env.REACT_APP_FRONTEND_ROOT}/buy-history`}
+            href={'/buy-history'}
             className="block py-2 px-4 hover:bg-gray-100 hover:text-[#1488D8] text-[#030391]"
           >
             Đơn mua
@@ -233,7 +233,7 @@ const DropdownSection = () => {
         </li>
         <li>
           <a
-            href={`${process.env.REACT_APP_FRONTEND_ROOT}/sell-history`}
+            href={'/sell-history'}
             className="block py-2 px-4 hover:bg-gray-100 hover:text-[#1488D8] text-[#030391]"
           >
             Đơn bán
@@ -262,8 +262,8 @@ const DropdownUser = () => {
           <a
             href={
               userLogin
-                ? `${process.env.REACT_APP_FRONTEND_ROOT}/user/${userLogin._id}`
-                : `${process.env.REACT_APP_FRONTEND_ROOT}/register`
+                ? `/user/${userLogin._id}`
+                : `/register`
             }
             className="block py-2 px-4 hover:bg-gray-100 hover:text-[#1488D8] text-[#030391]"
           >
@@ -273,7 +273,7 @@ const DropdownUser = () => {
         {userLogin ? (
           <li>
             <a
-              href={`${process.env.REACT_APP_FRONTEND_ROOT}/user/${userLogin._id}`}
+              href={`/user/${userLogin._id}`}
               className="block py-2 px-4 hover:bg-gray-100 hover:text-[#1488D8] text-[#030391]"
             >
               Cài đặt
@@ -284,8 +284,8 @@ const DropdownUser = () => {
           <a
             href={
               userLogin
-                ? `${process.env.REACT_APP_FRONTEND_ROOT}`
-                : `${process.env.REACT_APP_FRONTEND_ROOT}/login`
+                ? '/'
+                : '/login'
             }
             onClick={(e) => {
               if (userLogin) {
