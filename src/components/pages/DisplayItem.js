@@ -18,7 +18,7 @@ export default function DisplayItem() {
 
   const handleSubmit = async (event) => {
     if (event.target.name === "profile") navigate(`../user/${item.idAuthor}`);
-    else if (event.target.name === "homepage") window.location.assign(`${process.env.REACT_APP_FRONTEND_ROOT}`);
+    else if (event.target.name === "homepage") window.location.assign('/');
     else if (event.target.name === "status") {
       await updateStatus(user.token, itemId, !item.isSelling, () => {
         setItem({...item, isSelling: !item.isSelling})
@@ -173,7 +173,7 @@ export default function DisplayItem() {
         </span>
         <button
           onClick={(e) => {
-            window.location.assign(`${process.env.REACT_APP_FRONTEND_ROOT}/user/${item.idAuthor}`)
+            window.location.assign(`/user/${item.idAuthor}`)
           }}
           name="profile"
           className="bg-yellow-300 hover:bg-gray-400 text-gray-800 font-bold py-1 px-5 mr-5 mt-2 rounded"

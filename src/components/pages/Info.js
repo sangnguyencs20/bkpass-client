@@ -88,7 +88,7 @@ export function Info({saler}) {
               className="align-middle p-3 mr-3 rounded-md  bg-blue-500 hover:bg-blue-700 text-white ml-2"
               onClick={(e) => {
                 e.preventDefault();
-                window.location.assign(`${process.env.REACT_APP_FRONTEND_ROOT}/user/${saler.id}/add-comment`);
+                window.location.assign(`/user/${saler.id}/add-comment`);
               }}
             >
               Thêm đánh giá
