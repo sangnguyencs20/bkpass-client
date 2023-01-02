@@ -34,7 +34,7 @@ export const searchItemsByCategory = async (category, page, sortBy, status, call
 
 export const getListItem = async (page, callback, errCallback) => {
   try {
-    const url = `bkpass-server.up.railway.app/api/items?page=${page}`;
+    const url = `${process.env.REACT_APP_SERVER_URL}/items?page=${page}`;
     const res = await axios.get(url);
     if (res.status === 200) {
       callback(res.data.items);
