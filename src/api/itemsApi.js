@@ -49,7 +49,7 @@ export const getListItem = async (page, callback, errCallback) => {
 
 export const getListSellingItem = async (id, selling, callback, errCallback) => {
   try {
-    const url = `${process.env.REACT_APP_SERVER_URL}/items?author=${id}&selling=${selling}`;
+    const url = `https://bkpassserver.up.railway.app/api/items?author=${id}&selling=${selling}`;
     const res = await axios.get(url);
     if (res.status === 200) {
       callback(res.data.items);
